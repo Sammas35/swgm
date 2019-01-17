@@ -1,0 +1,3 @@
+<div *ngFor="let handout of handouts">
+    <app-handout [handout]="handout" (change)="saveHandout(handout)"></app-handout>
+</div>

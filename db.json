@@ -1,0 +1,28 @@
+{
+  "handouts": [
+    {
+      "id": 1,
+      "name": "Brentaal IV",
+      "url": "http://starwars.wikia.com/wiki/Brentaal_IV",
+      "visible": true
+    },
+    {
+      "id": 2,
+      "name": "Felucia",
+      "url": "http://starwars.wikia.com/wiki/Felucia",
+      "visible": true
+    },
+    {
+      "id": 3,
+      "name": "XQ2 Platform",
+      "url": "http://starwars.wikia.com/wiki/XQ2_Platform",
+      "visible": true
+    },
+    {
+      "id": 4,
+      "name": "Chevin",
+      "url": "http://starwars.wikia.com/wiki/Chevin/Legends",
+      "visible": true
+    }
+  ]
+}

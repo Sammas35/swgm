@@ -1,0 +1,13 @@
+<input type="text"
+       #name="ngModel"
+       [(ngModel)]="handout.name"
+       (blur)="name.control.dirty && !name.control.pristine && changedHandout(handout)"/>
+<input type="text"
+       #url="ngModel"
+       [(ngModel)]="handout.url"
+       (blur)="url.control.dirty && !url.control.pristine && changedHandout(handout)"/>
+<input type="checkbox"
+       #visible="ngModel"
+       [(ngModel)]="handout.visible"
+       (change)="visible.control.dirty && !visible.control.pristine && changedHandout(handout)"/>
+        <span>Sichtbar</span>
