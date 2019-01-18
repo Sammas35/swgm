@@ -1,14 +1,13 @@
 <div class="column-container">
     <div class="first-column">
-
-
-        <div *ngFor="let handout of handouts">
-            <a href="{{handout.url}}"
-               *ngIf="handout.visible"
-               target="detail">{{handout.name}}</a>
+        <div *ngIf="handouts">
+            <div *ngFor="let handout of handouts">
+                <a href="{{handout.url}}"
+                   *ngIf="handout.visible"
+                   target="detail">{{handout.name}}</a>
+            </div>
         </div>
     </div>
-
 
     <div class="second-column">
         <iframe name="detail"
