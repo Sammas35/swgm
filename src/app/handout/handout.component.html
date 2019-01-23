@@ -1,4 +1,13 @@
 <form class="example-form">
+    <mat-checkbox type="checkbox"
+                  name="visible"
+                  #visible="ngModel"
+                  placeholder="Sichtbar"
+                  [(ngModel)]="handout.visible"
+                  (change)="visible.control.dirty && !visible.control.pristine && changedHandout(handout)">
+        <span>Sichtbar</span>
+    </mat-checkbox>
+
     <mat-form-field class="example-full-width">
         <input type="text"
                matInput
@@ -18,12 +27,4 @@
                (blur)="url.control.dirty && !url.control.pristine && changedHandout(handout)"/>
     </mat-form-field>
 
-    <mat-checkbox type="checkbox"
-                  name="visible"
-                  #visible="ngModel"
-                  placeholder="Sichtbar"
-                  [(ngModel)]="handout.visible"
-                  (change)="visible.control.dirty && !visible.control.pristine && changedHandout(handout)">
-        <span>Sichtbar</span>
-    </mat-checkbox>
 </form>

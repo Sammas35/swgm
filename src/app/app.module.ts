@@ -10,6 +10,9 @@ import {FormsModule} from "@angular/forms";
 import {HandoutComponent} from './handout/handout.component';
 import {NoopAnimationsModule} from "@angular/platform-browser/animations";
 import {MatButtonModule, MatCheckboxModule, MatInputModule} from "@angular/material";
+import {SocketIoConfig, SocketIoModule} from "ngx-socket-io";
+
+const config: SocketIoConfig = { url: 'http://localhost:3000', options: {} };
 
 @NgModule({
     declarations: [
@@ -26,7 +29,8 @@ import {MatButtonModule, MatCheckboxModule, MatInputModule} from "@angular/mater
         NoopAnimationsModule,
         MatButtonModule,
         MatInputModule,
-        MatCheckboxModule
+        MatCheckboxModule,
+        SocketIoModule.forRoot(config)
     ],
     providers: [],
     bootstrap: [AppComponent]

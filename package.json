@@ -8,7 +8,8 @@
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
-    "express": "node ./bin/www.js"
+    "backend": "node socketback.js",
+    "express": "node app.js"
   },
   "private": true,
   "dependencies": {
@@ -28,8 +29,10 @@
     "express": "^4.16.4",
     "mongoose": "^5.4.2",
     "morgan": "^1.9.1",
+    "ngx-socket-io": "^2.1.1",
     "rxjs": "~6.3.3",
     "serve-favicon": "^2.5.0",
+    "socket.io": "^2.2.0",
     "tslib": "^1.9.0",
     "zone.js": "~0.8.26"
   },
