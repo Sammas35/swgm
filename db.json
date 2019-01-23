@@ -23,6 +23,16 @@
       "name": "Chevin Species",
       "url": "http://starwars.wikia.com/wiki/Chevin/Legends",
       "visible": true
+    },
+    {
+      "name": "Egal",
+      "id": 5,
+      "visible": true
+    },
+    {
+      "name": "Egaler",
+      "id": 6,
+      "visible": true
     }
   ]
 }

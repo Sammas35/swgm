@@ -24,12 +24,12 @@ export class SwgmapiService {
         return this.http.get<Handout[]>(this.URL)
     }
 
-    addHandout(handout: Handout) {
+    addHandout(handout: Handout) : Observable<Handout> {
         console.log('service addHandout');
 
         return this.http.post<Handout>(this.URL, handout, httpOptions).pipe(
-            tap((handout: Handout) => console.log(`added handout w/ id=${handout.name}`)),
-            catchError(this.handleError('addHandout', []))
+            tap((handout: Handout) => console.log(`added handout w/ id=${handout.id}`)),
+            catchError(this.handleError<Handout>('addHandout', null))
         );
     }
 

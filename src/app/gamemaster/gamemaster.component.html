@@ -1,3 +1,5 @@
 <div *ngFor="let handout of handouts">
     <app-handout [handout]="handout" (change)="saveHandout(handout)"></app-handout>
 </div>
+<app-handout [handout]="newHandout"></app-handout>
+<button (click)="addHandout(newHandout)">Neu</button>
