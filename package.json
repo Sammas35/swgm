@@ -8,7 +8,6 @@
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
-    "backend": "node socketback.js",
     "express": "node app.js"
   },
   "private": true,
@@ -23,6 +22,7 @@
     "@angular/platform-browser": "~7.2.0",
     "@angular/platform-browser-dynamic": "~7.2.0",
     "@angular/router": "~7.2.0",
+    "@types/socket.io-client": "^1.4.32",
     "bluebird": "^3.5.3",
     "body-parser": "^1.18.3",
     "core-js": "^2.5.4",
@@ -33,6 +33,7 @@
     "rxjs": "~6.3.3",
     "serve-favicon": "^2.5.0",
     "socket.io": "^2.2.0",
+    "socket.io-client": "^2.2.0",
     "tslib": "^1.9.0",
     "zone.js": "~0.8.26"
   },

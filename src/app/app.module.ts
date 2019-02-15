@@ -11,15 +11,18 @@ import {HandoutComponent} from './handout/handout.component';
 import {NoopAnimationsModule} from "@angular/platform-browser/animations";
 import {MatButtonModule, MatCheckboxModule, MatInputModule} from "@angular/material";
 import {SocketIoConfig, SocketIoModule} from "ngx-socket-io";
+import {WebsocketService} from "./websocket-service/websocket.service";
+import {SwgmapiService} from "./swgm-service/swgmapi.service";
+import { MapsComponent } from './maps/maps.component';
 
-const config: SocketIoConfig = { url: 'http://localhost:3000', options: {} };
 
 @NgModule({
     declarations: [
         AppComponent,
         LinksComponent,
         GamemasterComponent,
-        HandoutComponent
+        HandoutComponent,
+        MapsComponent
     ],
     imports: [
         BrowserModule,
@@ -30,9 +33,9 @@ const config: SocketIoConfig = { url: 'http://localhost:3000', options: {} };
         MatButtonModule,
         MatInputModule,
         MatCheckboxModule,
-        SocketIoModule.forRoot(config)
+        // SocketIoModule.forRoot(config)
     ],
-    providers: [],
+    providers: [WebsocketService, SwgmapiService],
     bootstrap: [AppComponent]
 })
 export class AppModule {

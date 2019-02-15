@@ -1,5 +1,5 @@
 import {Component, OnInit} from '@angular/core';
-import {SwgmapiService} from "./swgm/swgmapi.service";
+import {SwgmapiService} from "./swgm-service/swgmapi.service";
 
 @Component({
     selector: 'app-root',

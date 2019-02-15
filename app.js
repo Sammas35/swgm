@@ -1,3 +1,4 @@
+const express = require('express');
 const jsonServer = require('json-server');
 const server = jsonServer.create();
 const router = jsonServer.router('db.json');
@@ -9,8 +10,9 @@ const io = require('socket.io')(http);
 server.use(middlewares);
 server.use(mwmessage(io));
 server.use(router);
+
 http.listen(3000, () => {
-    console.log('JSON Server is running');
+    console.log('JSON Server is running on 3000');
 });
 module.exports = server;
 

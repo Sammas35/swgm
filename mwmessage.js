@@ -1,11 +1,12 @@
 module.exports = (io) => {
-    var iolocal = io;
+    let iolocal = io;
     return (req, res, next) => {
-        console.log('Aktualisiert euch', req.method);
         if (req.method === 'POST' ||
             req.method === 'PUT' ||
-            req.method === 'DELETE')
+            req.method === 'DELETE') {
+            console.log('Aktualisiert euch', req.method);
             iolocal.emit('playerrefresh', req.method);
+        }
         next()
     }
 };

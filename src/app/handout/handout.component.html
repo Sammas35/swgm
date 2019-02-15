@@ -1,30 +1,28 @@
 <form class="example-form">
-    <mat-checkbox type="checkbox"
-                  name="visible"
-                  #visible="ngModel"
-                  placeholder="Sichtbar"
-                  [(ngModel)]="handout.visible"
-                  (change)="visible.control.dirty && !visible.control.pristine && changedHandout(handout)">
-        <span>Sichtbar</span>
-    </mat-checkbox>
-
-    <mat-form-field class="example-full-width">
-        <input type="text"
-               matInput
-               name="name"
-               #name="ngModel"
-               placeholder="Name"
-               [(ngModel)]="handout.name"
-               (blur)="name.control.dirty && !name.control.pristine && changedHandout(handout)"/>
-    </mat-form-field>
-    <mat-form-field class="example-full-width">
-        <input type="text"
-               matInput
-               name="url"
-               #url="ngModel"
-               placeholder="Url"
-               [(ngModel)]="handout.url"
-               (blur)="url.control.dirty && !url.control.pristine && changedHandout(handout)"/>
-    </mat-form-field>
-
+            <mat-checkbox type="checkbox"
+                          name="visible"
+                          #visible="ngModel"
+                          placeholder="Sichtbar"
+                          [(ngModel)]="handout.visible"
+                          (change)="visible.control.dirty && !visible.control.pristine && changedHandout(handout)">
+                <span>Sichtbar</span>
+            </mat-checkbox>
+            <mat-form-field class="example-full-width">
+                <input type="text"
+                       matInput
+                       name="name"
+                       #name="ngModel"
+                       placeholder="Name"
+                       [(ngModel)]="handout.name"
+                       (blur)="name.control.dirty && !name.control.pristine && changedHandout(handout)"/>
+            </mat-form-field>
+            <mat-form-field class="example-full-width">
+                <input type="text"
+                       matInput
+                       name="url"
+                       #url="ngModel"
+                       placeholder="Url"
+                       [(ngModel)]="handout.url"
+                       (blur)="url.control.dirty && !url.control.pristine && changedHandout(handout)"/>
+            </mat-form-field>
 </form>

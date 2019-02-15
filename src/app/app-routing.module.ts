@@ -2,10 +2,12 @@ import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import {LinksComponent} from "./links/links.component";
 import {GamemasterComponent} from "./gamemaster/gamemaster.component";
+import {MapsComponent} from "./maps/maps.component";
 
 const routes: Routes = [  { path: '', redirectTo: '/links', pathMatch: 'full' },
   { path: 'links',  component: LinksComponent },
-  { path: 'gamemaster',  component: GamemasterComponent }];
+  { path: 'maps',  component: MapsComponent },
+  { path: 'gamemaster/links',  component: GamemasterComponent }];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
