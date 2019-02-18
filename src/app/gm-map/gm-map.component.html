@@ -1,0 +1,16 @@
+<form action="" name="form">
+<app-maps style="width:400px;height:400px;" [rooms]="rooms"></app-maps>
+<input type="text"
+       [(ngModel)]="room.start.x"
+       name="x"
+       placeholder="Start X">
+<input type="text"
+       [(ngModel)]="room.start.y"
+       name="y"
+       placeholder="Start Y">
+<input type="text"
+       [(ngModel)]="room.path"
+       name="path"
+       placeholder="Path">
+<button type="submit" (click)="updateRooms()">los</button>
+</form>

@@ -15,7 +15,6 @@ const httpOptions = {
 export class SwgmapiService {
 
     private URL = 'http://10.235.8.35:3000/handouts';
-    private socket: any;
 
     constructor(private http: HttpClient) {
     }

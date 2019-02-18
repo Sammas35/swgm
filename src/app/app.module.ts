@@ -10,10 +10,10 @@ import {FormsModule} from "@angular/forms";
 import {HandoutComponent} from './handout/handout.component';
 import {NoopAnimationsModule} from "@angular/platform-browser/animations";
 import {MatButtonModule, MatCheckboxModule, MatInputModule} from "@angular/material";
-import {SocketIoConfig, SocketIoModule} from "ngx-socket-io";
 import {WebsocketService} from "./websocket-service/websocket.service";
 import {SwgmapiService} from "./swgm-service/swgmapi.service";
 import { MapsComponent } from './maps/maps.component';
+import { GmMapComponent } from './gm-map/gm-map.component';
 
 
 @NgModule({
@@ -22,7 +22,8 @@ import { MapsComponent } from './maps/maps.component';
         LinksComponent,
         GamemasterComponent,
         HandoutComponent,
-        MapsComponent
+        MapsComponent,
+        GmMapComponent
     ],
     imports: [
         BrowserModule,
@@ -32,8 +33,7 @@ import { MapsComponent } from './maps/maps.component';
         NoopAnimationsModule,
         MatButtonModule,
         MatInputModule,
-        MatCheckboxModule,
-        // SocketIoModule.forRoot(config)
+        MatCheckboxModule
     ],
     providers: [WebsocketService, SwgmapiService],
     bootstrap: [AppComponent]

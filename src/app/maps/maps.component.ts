@@ -1,4 +1,4 @@
-import {Component, ElementRef, OnInit, ViewChild} from '@angular/core';
+import {Component, ElementRef, Input, OnChanges, OnInit, ViewChild} from '@angular/core';
 import {Room} from "../domain/room";
 import {Painter} from "./painter";
 
@@ -7,8 +7,8 @@ import {Painter} from "./painter";
     templateUrl: './maps.component.html',
     styleUrls: ['./maps.component.scss']
 })
-export class MapsComponent implements OnInit {
-
+export class MapsComponent implements OnInit, OnChanges {
+    @Input()
     rooms: Room[];
 
     @ViewChild('myCanvas')
@@ -19,15 +19,23 @@ export class MapsComponent implements OnInit {
     }
 
     ngOnInit() {
+    }
+
+    ngOnChanges(){
         let ctx;
         let painter;
 
-        this.rooms = this.loadRooms();
+        console.log(this.rooms);
 
-        this.canvasRef.nativeElement.width = window.innerWidth;
-        this.canvasRef.nativeElement.height = window.innerHeight;
+        // this.rooms = this.loadRooms();
+
+        // this.canvasRef.nativeElement.width = window.innerWidth;
+        // this.canvasRef.nativeElement.height = window.innerHeight;
 
         ctx = this.getContext();
+
+        ctx.clearRect(0, 0, this.canvasRef.nativeElement.width, this.canvasRef.nativeElement.height);
+
         painter = new Painter(ctx);
 
         ctx.beginPath();
@@ -47,21 +55,21 @@ export class MapsComponent implements OnInit {
 
     private loadRooms() {
         return [
-            {
-                start: {x: 1, y: 1},
-                path: "5,i3,i3,t71,1,i3"
-            },
-            {
-                start: {x: 1, y: 4},
-                path: "1,t71,3,i1,t11,1,i5,i3"
-            },
-            {
-                start: {x: 10, y: 1},
-                path: "1,t11,1,t21,1,t31,1,t41,1,t51,1,t61,1,t71" +
-                    ",i1,t11,1,t21,1,t31,1,t41,1,t51,1,t61,1,t71" +
-                    ",i1,t11,1,t21,1,t31,1,t41,1,t51,1,t61,1,t71" +
-                    ",i1,t11,1,t21,1,t31,1,t41,1,t51,1,t61,1,t71"
-            },
+            // {
+            //     start: {x: 1, y: 1},
+            //     path: "5,i3,i3,t71,1,i3"
+            // },
+            // {
+            //     start: {x: 1, y: 4},
+            //     path: "1,t71,3,i1,t11,1,i5,i3"
+            // },
+            // {
+            //     start: {x: 10, y: 1},
+            //     path: "1,t11,1,t21,1,t31,1,t41,1,t51,1,t61,1,t71" +
+            //         ",i1,t11,1,t21,1,t31,1,t41,1,t51,1,t61,1,t71" +
+            //         ",i1,t11,1,t21,1,t31,1,t41,1,t51,1,t61,1,t71" +
+            //         ",i1,t11,1,t21,1,t31,1,t41,1,t51,1,t61,1,t71"
+            // },
             // {
             //     start: {x: 7, y: 5},
             //     path: "4,i3,i2,t1,1,i3"
